@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
   class Movies extends Model {
 
     static associate(models) {
-      Movies.belongsTo(models.Articles);
     }
   }
   Movies.init({
@@ -25,14 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     vote_count: DataTypes.INTEGER,
     vote_average: DataTypes.FLOAT,
     on_theaters: DataTypes.BOOLEAN,
-    ArticleIdArticle: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Articles',
-        key: 'id_article'
-      }
-    }
+    
   }, {
     sequelize,
     modelName: 'Movies',

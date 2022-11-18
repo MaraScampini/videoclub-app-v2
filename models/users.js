@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     email: DataTypes.STRING,
     date_of_sign_up: DataTypes.DATEONLY,
+    deleted: DataTypes.BOOLEAN,
     RoleIdRole: {
       type: DataTypes.STRING,
       allowNull: false,

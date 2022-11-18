@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       Loans.belongsTo(models.Users)
-      Loans.belongsTo(models.Articles)
+      Loans.belongsTo(models.Movies)
     }
   }
   Loans.init({
@@ -27,12 +27,12 @@ module.exports = (sequelize, DataTypes) => {
         model: 'Users',
         key: 'id_user'
       },
-    ArticleIdArticle: {
-      type: DataTypes.STRING,
+    MovieIdMovie: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Articles',
-        key: "id_article"
+        model: 'Movies',
+        key: "id_movie"
       }
     }
   }}, 

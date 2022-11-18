@@ -55,7 +55,12 @@ const authLoginController = async (req, res) => {
       where: { email: email }
     });
     if (!userFound) {
-      res.status(401).json({ message: "email incorrect" })
+      res.status(401).json({ message: "Password or email incorrect" });
+      return;
+    }
+
+    if(userFound.deleted == true) {
+      res.status(401).json({ message: "Access forbidden" });
       return;
     }
     // Encrypt the provided password and check that it matches with the hash in the database

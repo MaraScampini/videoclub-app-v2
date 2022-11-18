@@ -13,11 +13,11 @@ app.listen(PORT, () => {
   console.log(`Servidor levantado en el puerto ${PORT}`)
   // sequelize.sync({ force: true })
   // db.authenticate()
-  db.authenticate()
-    .then(() => {
-      console.log("Conectados a la DB");
-    })
-    .catch((error) => {
-      console.log("Se ha producido un error: " + error);
-    });
+db.authenticate()
+  .then(() => {
+    console.log("Conectados a la DB");
+  })
+  .catch((error) => {
+    console.log("Se ha producido un error: " + error);
+  });
 })

@@ -14,7 +14,6 @@ module.exports = {
       vote_count: 16829,
       vote_average: 8.7,
       on_theaters: false,
-      ArticleIdArticle: 1
     },
     {
       id_movie: 2,
@@ -27,7 +26,7 @@ module.exports = {
       vote_count: 22561,
       vote_average: 8.7,
       on_theaters: false,
-      ArticleIdArticle: 2
+
     },
     {
       id_movie: 3,
@@ -40,7 +39,6 @@ module.exports = {
       vote_count: 13393,
       vote_average: 8.6,
       on_theaters: false,
-      ArticleIdArticle: 3
     },
     {
       id_movie: 4,
@@ -53,7 +51,6 @@ module.exports = {
       vote_count: 305,
       vote_average: 7.2,
       on_theaters: true,
-      ArticleIdArticle: 4
     },
     {
       id_movie: 5,
@@ -66,7 +63,6 @@ module.exports = {
       vote_count: 742,
       vote_average: 7,
       on_theaters: true,
-      ArticleIdArticle: 5
     },
     {
       id_movie: 6,
@@ -79,7 +75,6 @@ module.exports = {
       vote_count: 16362,
       vote_average: 8.2,
       on_theaters: false,
-      ArticleIdArticle: 6
     },
     {
       id_movie: 7,
@@ -92,7 +87,6 @@ module.exports = {
       vote_count: 805,
       vote_average: 6.6,
       on_theaters: true,
-      ArticleIdArticle: 7
     },
     {
       id_movie: 8,
@@ -105,8 +99,7 @@ module.exports = {
       vote_count: 2117,
       vote_average: 7.5,
       on_theaters: false,
-      ArticleIdArticle: 8
-    },
+          },
     {
       id_movie: 9,
       title: "Cerdita",
@@ -118,8 +111,7 @@ module.exports = {
       vote_count: 148,
       vote_average: 6.8,
       on_theaters: true,
-      ArticleIdArticle: 9
-    },
+          },
     {
       id_movie: 10,
       title: "Thor: Love and Thunder",
@@ -131,7 +123,7 @@ module.exports = {
       vote_count: 4510,
       vote_average: 6.7,
       on_theaters: false,
-      ArticleIdArticle: 10
+      
     },
     {
       id_movie: 11,
@@ -144,7 +136,7 @@ module.exports = {
       vote_count: 387,
       vote_average: 6.8,
       on_theaters: false,
-      ArticleIdArticle: 11
+      
     },
     {
       id_movie: 12,
@@ -157,7 +149,7 @@ module.exports = {
       vote_count: 4561,
       vote_average: 8.3,
       on_theaters: false,
-      ArticleIdArticle: 12
+      
     },
     {
       id_movie: 13,
@@ -170,7 +162,7 @@ module.exports = {
       vote_count: 708,
       vote_average: 6.9,
       on_theaters: false,
-      ArticleIdArticle: 13
+      
     },
     {
       id_movie: 14,
@@ -183,7 +175,7 @@ module.exports = {
       vote_count: 526,
       vote_average: 7,
       on_theaters: true,
-      ArticleIdArticle: 14
+      
     },
     {
       id_movie: 15,
@@ -196,7 +188,7 @@ module.exports = {
       vote_count: 6217,
       vote_average: 7.4,
       on_theaters: false,
-      ArticleIdArticle: 15
+      
     },
     {
       id_movie: 16,
@@ -209,7 +201,7 @@ module.exports = {
       vote_count: 81,
       vote_average: 9.2,
       on_theaters: false,
-      ArticleIdArticle: 16
+      
     },
     {
       id_movie: 17,
@@ -222,7 +214,7 @@ module.exports = {
       vote_count: 2,
       vote_average: 4,
       on_theaters: true,
-      ArticleIdArticle: 17
+      
     },
     {
       id_movie: 18,
@@ -235,7 +227,7 @@ module.exports = {
       vote_count: 10,
       vote_average: 6.2,
       on_theaters: false,
-      ArticleIdArticle: 18
+      
     },
     {
       id_movie: 19,
@@ -248,7 +240,7 @@ module.exports = {
       vote_count: 3007,
       vote_average: 7.9,
       on_theaters: false,
-      ArticleIdArticle: 19
+      
     },
     {
       id_movie: 20,
@@ -261,7 +253,7 @@ module.exports = {
       vote_count: 652,
       vote_average: 8.3,
       on_theaters: false,
-      ArticleIdArticle: 20
+      
     }
 
 

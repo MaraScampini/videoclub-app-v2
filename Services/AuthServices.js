@@ -35,7 +35,7 @@ const assertEmailIsUniqueService = async (email) => {
   const user = await models.Users.findOne({
     where: {email:email}
   });
-  if (user) {
+  if (user && user.deleted == false) {
     throw new Error("Email is already registered")
   }
 };
@@ -51,9 +51,10 @@ const encryptPasswordService = (pass) => {
 
 // Service to create a new user in the database
 const createUserService = async (userBody) => {
+
   const hash = encryptPasswordService(userBody.password);
-  console.log(userBody.password)
   userBody.password = hash;
+  
   const user = await models.Users.create({
     name: userBody.name,
     username: userBody.username,
@@ -62,6 +63,7 @@ const createUserService = async (userBody) => {
     address: userBody.address,
     city: userBody.city,
     date_of_sign_up: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`,
+    deleted: false,
     RoleIdRole: userBody.role
   });
   return user;
