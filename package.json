@@ -1,0 +1,39 @@
+{
+  "name": "weekly-04",
+  "version": "0.0.1",
+  "description": "Back-end project with NodeJS, SQL and Sequelize",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaraScampini/Weekly-04.git"
+  },
+  "keywords": [
+    "node",
+    "sequelize",
+    "sql",
+    "backend",
+    "rental"
+  ],
+  "author": "Mara Scampini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaraScampini/Weekly-04/issues"
+  },
+  "homepage": "https://github.com/MaraScampini/Weekly-04#readme",
+  "dependencies": {
+    "axios": "^1.1.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.3",
+    "sequelize-cli": "^6.5.2"
+  }
+}
