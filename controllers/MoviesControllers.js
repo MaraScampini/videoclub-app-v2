@@ -31,7 +31,7 @@ MoviesControllers.getByTitle = async (req, res) => {
   let title = req.params.title;
   let resp = await models.Movies.findAll({
     where: {
-      title: { [Op.like]: `${title}%` },
+      title: { [Op.like]: `%${title}%` },
     },
   });
   res.send(resp);
@@ -40,8 +40,18 @@ MoviesControllers.getByTitle = async (req, res) => {
 MoviesControllers.getByGenre = async (req, res) => {
   let genre = req.params.genre;
   let resp = await models.Movies.findAll({
-    attributes: ["title", "genre"],
+
     where: { genre: genre },
+  });
+  res.send(resp);
+};
+// Get movies by director
+MoviesControllers.getByDirector = async (req, res) => {
+  let director = req.params.director;
+  let resp = await models.Movies.findAll({
+    where: {
+      director: { [Op.like]: `%${director}%` },
+    },
   });
   res.send(resp);
 };

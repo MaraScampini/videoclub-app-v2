@@ -36,8 +36,8 @@ module.exports = {
       vote_average: {
         type: Sequelize.FLOAT
       },
-      on_theaters: { 
-        type: Sequelize.BOOLEAN
+      director: { 
+        type: Sequelize.STRING
       },
       ArticleIdArticle: {
         allowNull: false,

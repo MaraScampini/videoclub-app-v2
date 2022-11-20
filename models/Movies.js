@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     release_date: DataTypes.DATEONLY,
     vote_count: DataTypes.INTEGER,
     vote_average: DataTypes.FLOAT,
-    on_theaters: DataTypes.BOOLEAN,
+    director: DataTypes.STRING,
     
   }, {
     sequelize,

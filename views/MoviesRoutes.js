@@ -14,5 +14,8 @@ router.get('/:id', MoviesControllers.getById);
 router.get('/title/:title', MoviesControllers.getByTitle);
 // Movies by genre
 router.get('/genre/:genre', MoviesControllers.getByGenre);
+// Movies by genre
+router.get('/director/:director', MoviesControllers.getByDirector);
+
 
 module.exports = router;
