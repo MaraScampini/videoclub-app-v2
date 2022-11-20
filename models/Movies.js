@@ -6,6 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   class Movies extends Model {
 
     static associate(models) {
+      Movies.hasMany(models.Favorites);
+      Movies.hasMany(models.Loans);
     }
   }
   Movies.init({

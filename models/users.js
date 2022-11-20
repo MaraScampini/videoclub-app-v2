@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Users.belongsTo(models.Roles);
       Users.hasMany(models.Loans);
+      Users.hasMany(models.Favorites);
     }
   }
   Users.init({

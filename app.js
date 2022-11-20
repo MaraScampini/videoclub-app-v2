@@ -4,9 +4,12 @@ const { sequelize } = require('./models/index');
 const app = express();
 const router = require('./router');
 const PORT = 3000;
+const cors = require('cors')
 
 app.use(express.json());
 app.use(router);
+app.use(cors());
+
 
 
 app.listen(PORT, () => {

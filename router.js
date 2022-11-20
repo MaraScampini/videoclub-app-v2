@@ -6,6 +6,7 @@ const ShowsRoutes = require('./views/ShowsRoutes');
 const UsersRoutes = require('./views/UsersRoutes');
 const AuthRoutes = require('./views/AuthRoutes');
 const LoansRoutes = require('./views/LoansRoutes')
+const FavoritesRoutes = require('./views/FavoritesRoutes')
 const {authBearerMiddleware} = require("./middlewares/authMiddleware")
 
 router.use('/auth', AuthRoutes);
@@ -14,5 +15,6 @@ router.use('/shows', ShowsRoutes);
 router.use(authBearerMiddleware)
 router.use('/users', UsersRoutes);
 router.use('/loans', LoansRoutes)
+router.use("/fav", FavoritesRoutes);
 
 module.exports = router;
