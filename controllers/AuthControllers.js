@@ -31,7 +31,7 @@ const authRegisterController = async (req, res) => {
   }
   // Check that the email is not already registered
   try {
-    assertEmailIsUniqueService(body.email);
+   await assertEmailIsUniqueService(body.email);
   } catch (error) {
     console.error(error);
     res.status(400).send(`Email is already registered`)
