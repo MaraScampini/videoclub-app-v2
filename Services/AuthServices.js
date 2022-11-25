@@ -64,7 +64,7 @@ const createUserService = async (userBody) => {
     city: userBody.city,
     date_of_sign_up: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`,
     deleted: false,
-    RoleIdRole: userBody.role
+    RoleIdRole: "user"
   });
   return user;
 }
