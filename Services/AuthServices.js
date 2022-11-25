@@ -36,6 +36,7 @@ const assertEmailIsUniqueService = async (email) => {
     where: {email:email}
   });
   if (user && user.deleted == false) {
+    console.log("Hola 1")
     throw new Error("Email is already registered")
   }
 };

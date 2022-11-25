@@ -4,6 +4,7 @@ const models = require("../models/index");
 // Loan a movie
 LoansControllers.LoanMovie = async (req, res) => {
   try {
+    console.log("Loan")
     let body = req.body;
     delete body.date;
     delete body.end_date;
@@ -24,11 +25,13 @@ LoansControllers.LoanMovie = async (req, res) => {
         }-${new Date().getDate()}`,
         return_date: `${new Date().getFullYear()}-${
           new Date().getMonth() + 1
-        }-${new Date().getDate() + 7}`,
+        }-${new Date().getDate() + 5}`,
         end_date: null,
         UserIdUser: req.auth.id,
         MovieIdMovie: body.id,
       });
+              console.log("Holaa");
+
       res.status(200).json({
         resp,
         email: req.auth?.email,
