@@ -25,12 +25,11 @@ LoansControllers.LoanMovie = async (req, res) => {
         }-${new Date().getDate()}`,
         return_date: `${new Date().getFullYear()}-${
           new Date().getMonth() + 1
-        }-${new Date().getDate() + 5}`,
+        }-${new Date().getDate()}`,
         end_date: null,
         UserIdUser: req.auth.id,
         MovieIdMovie: body.id,
       });
-              console.log("Holaa");
 
       res.status(200).json({
         resp,
@@ -72,6 +71,7 @@ LoansControllers.editLoan = async (req, res) => {
         {
           where: {
             UserIdUser: req.auth.id,
+            MovieIdMovie: body.id
           },
         }
       );
@@ -89,6 +89,7 @@ LoansControllers.getMyLoans = async (req, res) => {
   let resp = await models.Loans.findAll({
     where: {
       UserIdUser: req.auth.id,
+      end_date: null
     },
     include: models.Movies
   });
@@ -103,6 +104,7 @@ LoansControllers.getAllActive = async (req, res) => {
     where: {
       end_date: null,
     },
+    include:  [models.Users, models.Movies]
   });
 
   res.status(200).json({
@@ -112,7 +114,9 @@ LoansControllers.getAllActive = async (req, res) => {
 };
 // See all loans - ADMIN ONLY
 LoansControllers.getAll = async (req, res) => {
-  let resp = await models.Loans.findAll({});
+  let resp = await models.Loans.findAll({
+    include: [models.Users, models.Movies],
+  });
   res.status(200).json({
     message: "These are all the loans",
     resp,

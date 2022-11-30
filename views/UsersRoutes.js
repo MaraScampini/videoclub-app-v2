@@ -5,6 +5,10 @@ const { authBearerMiddleware, isValidRole, isvali, isValidUser, isValidUserID } 
 
 const UsersControllers = require('../controllers/UsersControllers')
 
+// See all users (admin only)
+router.get('/all', isValidRole("admin"), UsersControllers.getAllActiveUsers)
+// See all deleted users (admin only)
+router.get('/deleted', isValidRole("admin"), UsersControllers.getAllDeletedUsers)
 // See my info
 router.get('/:email', isValidUser(), UsersControllers.getData);
 // Delete a user - ADMIN ONLY

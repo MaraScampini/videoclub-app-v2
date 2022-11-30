@@ -2,6 +2,24 @@ const UsersControllers = {};
 const models = require("../models/index");
 const { encryptPasswordService } = require("../Services/AuthServices");
 
+//Get all users
+UsersControllers.getAllActiveUsers = async (req, res) => {
+  let resp = await models.Users.findAll(
+   { where: {
+      deleted: false
+    }}
+  );
+  res.send(resp)
+}
+// Get all deleted users
+UsersControllers.getAllDeletedUsers = async (req, res) => {
+  let resp = await models.Users.findAll({
+    where: {
+      deleted: true,
+    },
+  });
+  res.send(resp);
+};
 // Get data from my own profile
 UsersControllers.getData = async (req, res) => {
   let { email } = req.params;
