@@ -6,7 +6,8 @@ const { encryptPasswordService } = require("../Services/AuthServices");
 UsersControllers.getAllActiveUsers = async (req, res) => {
   let resp = await models.Users.findAll(
    { where: {
-      deleted: false
+      deleted: false,
+      roleIdRole: "user"
     }}
   );
   res.send(resp)
