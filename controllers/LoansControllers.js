@@ -4,7 +4,7 @@ const models = require("../models/index");
 // Loan a movie
 LoansControllers.LoanMovie = async (req, res) => {
   try {
-    console.log("Loan")
+    console.log("Loan");
     let body = req.body;
     delete body.date;
     delete body.end_date;
@@ -59,9 +59,7 @@ LoansControllers.editLoan = async (req, res) => {
       },
     });
     console.log(loanedMovie);
-    if (
-      body.id === loanedMovie.MovieIdMovie
-    ) {
+    if (body.id === loanedMovie.MovieIdMovie) {
       let resp = await models.Loans.update(
         {
           end_date: `${new Date().getFullYear()}-${
@@ -71,7 +69,7 @@ LoansControllers.editLoan = async (req, res) => {
         {
           where: {
             UserIdUser: req.auth.id,
-            MovieIdMovie: body.id
+            MovieIdMovie: body.id,
           },
         }
       );
@@ -86,17 +84,21 @@ LoansControllers.editLoan = async (req, res) => {
 };
 // See my own loans
 LoansControllers.getMyLoans = async (req, res) => {
-  let resp = await models.Loans.findAll({
-    where: {
-      UserIdUser: req.auth.id,
-      end_date: null
-    },
-    include: models.Movies
-  });
-  res.status(200).json({
-    resp,
-    message: "Here are your loans",
-  });
+  try {
+    let resp = await models.Loans.findAll({
+      where: {
+        UserIdUser: req.auth.id,
+        end_date: null,
+      },
+      include: models.Movies,
+    });
+    res.status(200).json({
+      resp,
+      message: "Here are your loans",
+    });
+  } catch (error) {
+    res.json({ message: "There are no loans" });
+  }
 };
 // See all active loans - ADMIN ONLY
 LoansControllers.getAllActive = async (req, res) => {
@@ -104,7 +106,7 @@ LoansControllers.getAllActive = async (req, res) => {
     where: {
       end_date: null,
     },
-    include:  [models.Users, models.Movies]
+    include: [models.Users, models.Movies],
   });
 
   res.status(200).json({
@@ -130,7 +132,7 @@ LoansControllers.getByUser = async (req, res) => {
     where: {
       UserIdUser: id,
     },
-    include: models.Movies
+    include: models.Movies,
   });
   res.status(200).json({
     message: `These are all the loans`,
