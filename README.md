@@ -8,7 +8,7 @@ As the concept is a Netflix-style API, every loan can only hold one item, be it 
 
 ![image](https://user-images.githubusercontent.com/109754827/200190031-fb1d4d0c-3804-45b6-b0c4-42b8c7d5ada0.png)
 
-## Technologies used
+## Technologies used in the project
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="120"/><img src="https://miro.medium.com/max/560/1*hAAm71eC0mIg3RIA6S4-DQ.png" height="120"/><img src="https://thumbs.dreamstime.com/b/icono-logo-design-ui-o-ux-app-de-la-base-de-datos-sql-96841969.jpg" height="120"/><img src="https://cdn.buttercms.com/4XpulFfySpWyYTXuaVL2" height="100"/><img src="https://seeklogo.com/images/S/sequelize-logo-9A5075DB9F-seeklogo.com.png" height="120"/>
 
